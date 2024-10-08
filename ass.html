@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <!-- Character Encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Search Engine Optimization (SEO) Meta Tags -->
+    <meta name="description" content="Portfolio of Alaa Najdi, showcasing skills, projects, and experience in web development and programming." />
+    <meta name="keywords" content="portfolio, web developer, projects, programming, HTML, CSS, JavaScript, C#, ASP.NET, full-stack developer" />
+    <meta name="author" content="Alaa Najdi" />
+
+    <!-- Social Media Optimization (Open Graph Tags) -->
+    <meta property="og:title" content="Alaa Najdi - Web Developer Portfolio" />
+    <meta property="og:description" content="Explore my web development projects, technical skills, and professional experience." />
+    <meta property="og:image" content="https://imagineab.se/wp-content/uploads/2017/11/human-icon.png" />
+    <meta property="og:url" content="https://github.com/AlaaNajdi/sda-3-onsite-backend-teamwork" />
+    <meta property="og:type" content="website" />
+
+    <!-- Title -->
+    <title>My Portfolio</title>
+
+    <!-- Optional: Add a Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    
+    <style>
+        #nav ul {
+            padding: 0;
+        }
+        #nav ul li {
+            margin: 10px 0; 
+        }
+        #nav ul li a {
+          padding: 10px 20px;
+        }
+</style>
+</head>
+<body>
+<div id="nav">
+    <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+<header>
+    <h1>Alaa Najdi</h1>
+    <p>Welcome to my portfolio!</p>
+</header>
+<section id="location">
+    <h2>My Location</h2>
+    <!-- Embed map -->
+    <iframe title="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509058!2d144.95373531550466!3d-37.81720974259479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5773743c8a0b5b7!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1635909300902!5m2!1sen!2sau" 
+        width="550" 
+        height="300" ></iframe>
+</section>
+
+<!-- Embed feavuret website 
+<section id="website">
+    <h2>Featured website</h2>
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.instagram.com/capricafe_sa?igsh=MXVvNmg5OTA4cWtnNQ==" 
+        title="faces beauty website" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe> -->
+</section>
+<section id="about">
+    <h2>About Me</h2>
+    <img src="https://imagineab.se/wp-content/uploads/2017/11/human-icon.png" alt="Profile Picture " height="100"/>
+    <p>Hello! I'm alaa, a passionate developer with experience in web development and programming.Welcome to my portfolio.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    
+    <div class="project">
+        <h3>backend project</h3>
+        <img src="https://www.webinspector.com/blog/wp-content/uploads/2020/07/website-checker.png" alt="Screenshot of Project " height="200"/>
+        <p>This project is about desaign the backend . It uses asp.net ,CRUD Operations and PostgerSQL .</p>
+        <a href="https://github.com/AlaaNajdi/sda-3-onsite-backend-teamwork" target="_blank">GitHub</a> 
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>C#</li>
+        <li>ASP.NET</li>
+        <li>data analysis</li>
+        <li>SQL</li>
+    </ul>
+</section>
+<section id="experience">
+    <h2>Experience</h2>
+    <div>
+        <h3>IT Assistant</h3>
+        <p>Managed Hardware and Software Installation configuration, and maintenance of computer hardware, and software applications.Installed software updates and system upgrades to ensure the stability and security of computer systems.Prepared Designing and implementation efficient end user feedback and error reporting systems.
+      </p>
+    </div>
+</section>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: alaa.najdi1998@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/alaa-najdi" target="_blank"> My LinkedIn </a></p>
+
+    <form>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required placeholder="Enter your name" />
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required placeholder="Enter your email" />
+        </div>
+        <div>
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" id="subject" required placeholder="Enter the subject" />
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" rows="5" required placeholder="Type your message here"></textarea>
+        </div>
+        <div>
+            <button type="submit">Send Message</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</section>
+
+
+</body>
+</html>
