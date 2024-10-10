@@ -1,0 +1,175 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFBEB; 
+    color: #333;
+}
+a {
+    color: #3498db;
+}
+h1,h3 {
+    color: #6f1b1f; 
+}
+#nav ul {
+    display: flex; 
+    list-style: none; 
+    justify-content: space-around; 
+    padding: 1rem;
+    margin: 0;
+    background-color: #ECE3CE; 
+}
+* {
+    box-sizing: border-box;
+}
+div {
+    box-sizing: border-box;  
+}
+#nav ul li {
+    margin: 0;
+}
+
+#nav ul li a {
+    padding: 1rem 2rem; 
+    text-decoration: none;
+    color: #6f1b1f;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+
+#nav ul li a:hover {
+    background-color: #f8f9f9;
+    color: white;
+    border-bottom: none; 
+}
+#main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+}
+
+#projects, #skills {
+    padding: 20px;
+    border: 1px solid #8b5c5c;
+    border-radius: 20px; 
+    background-color: #ffffff; 
+    width: 35rem;
+}
+
+
+header {
+    text-align: center;
+    padding: 6rem;
+    background-image: url('22.jpg');
+    background-size: cover;
+
+}
+.profile-image {
+    width: 100px;
+    height: 100px; 
+    border-radius: 50%;
+    position: absolute;
+    top: 19%;
+    left: 60%;
+}
+header p {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+header h1{
+    font-size: 3.5rem;
+}
+@media (max-width: 768px) {
+    #main-content {
+        flex-direction: column; 
+    }
+    #projects, #skills {
+        width: 100%; 
+    }
+}
+img {
+    max-width: 50%;
+    height: auto;
+}
+#projects,#skills{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+section {
+    padding: 2rem;
+    background-color: #fff;
+    margin: 1rem 0;
+}
+section h2 {
+    border-bottom: 2px solid #0033cc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    max-width: 500px;
+    margin: 1 auto; 
+    padding: 1rem;
+    background-color: #edd6db; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgb(0 0 0 / 56%);
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #adc8ea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #001a66;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    overflow: hidden;
+    margin: auto;
+}
+.slide {
+    display: none; 
+    padding: 20px;
+    text-align: center;
+}
+.slide p {
+    font-size: 2rem;
+    color: darkred;
+}
+.active {
+    display: block; 
+}
+.prev {
+        left: 240px;
+    position: relative;
+    top: -130px;
+}
+
+.next {
+    right: -1030px;
+    position: relative;
+    top: -130px;
+}

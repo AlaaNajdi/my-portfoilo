@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
-   <!-- Character Encoding -->
+    <!-- Character Encoding -->
     <meta charset="UTF-8" />
 
     <!-- Responsive Design -->
@@ -25,120 +25,143 @@
 
     <!-- Optional: Add a Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="ass.css">
     
-    <style>
-        #nav ul {
-            padding: 0;
-        }
-        #nav ul li {
-            margin: 10px 0; 
-        }
-        #nav ul li a {
-          padding: 10px 20px;
-        }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-<div id="nav">
-    <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div id="nav">
+        <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <h1 class="title">Alaa Najdi</h1>
+        <img src="pro.jpg" alt="Profile Image" class="profile-image" />
+        <p>Welcome to my portfolio!</p>
+        <p>Hello &hearts; I'm Alaa, a passionate developer with experience in web development and programming.</p>
+    </header>
+    <section id="slid show">
+<div class="slider">
+    <div class="slide active">
+        <p>My Favorite Sites</p>
+        <img src="lo.png" alt="First Slide" style="width:100%; height:auto;">
+        
+    </div>
+    <div class="slide">
+        <img src="fa.png" alt="second Slide" style="width:100%; height:auto;">
+    </div>
+    <div class="slide">
+        <img src="cp.png" alt="second Slide" style="width:100%; height:auto;">
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
 </div>
-<header>
-    <h1>Alaa Najdi</h1>
-    <p>Welcome to my portfolio!</p>
-</header>
-<section id="location">
-    <h2>My Location</h2>
-    <!-- Embed map -->
-    <iframe title="map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509058!2d144.95373531550466!3d-37.81720974259479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5773743c8a0b5b7!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1635909300902!5m2!1sen!2sau" 
-        width="550" 
-        height="300" ></iframe>
 </section>
+<script>
+let currentSlide = 0; // strat slaid
 
-<!-- Embed feavuret website 
-<section id="website">
-    <h2>Featured website</h2>
-    <iframe 
-        width="560" 
-        height="315" 
-        src="https://www.instagram.com/capricafe_sa?igsh=MXVvNmg5OTA4cWtnNQ==" 
-        title="faces beauty website" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe> -->
-</section>
-<section id="about">
-    <h2>About Me</h2>
-    <img src="https://imagineab.se/wp-content/uploads/2017/11/human-icon.png" alt="Profile Picture " height="100"/>
-    <p>Hello! I'm alaa, a passionate developer with experience in web development and programming.Welcome to my portfolio.</p>
-</section>
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide'); // select all slid
+    if (index >= slides.length) {
+        currentSlide = 0; //if the curnt slid it last slaid, go back to the first slid
+    } else if (index < 0) {
+        currentSlide = slides.length - 1; 
+        //if the curnt slid it first slaid, go back to the last slid
+    } else {
+        currentSlide = index; // show the now slid
+    }
 
-<section id="projects">
-    <h2>Projects</h2>
+    slides.forEach((slide, i) => {
+        slide.style.display = i === currentSlide ? 'block' : 'none';// show the now slid just
+    });
+}
+
+function moveSlide(step) {
+    showSlide(currentSlide + step); //trancefer to another slid useing click
+}
+
+//show first slid
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlide);
+});
+</script>
+    <section id="location">
+        <h2>My Location</h2>
+        <!-- Embed map -->
+        <iframe title="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d341808.31240592443!2d39.75387426742357!3d24.44454064637401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbe5197d220d5%3A0x2e54514fea3b08d9!2z2KfZhNmF2K_ZitmG2Kkg2KfZhNmF2YbZiNix2Kk!5e0!3m2!1sar!2ssa!4v1728552979289!5m2!1sar!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
     
-    <div class="project">
-        <h3>backend project</h3>
-        <img src="https://www.webinspector.com/blog/wp-content/uploads/2020/07/website-checker.png" alt="Screenshot of Project " height="200"/>
-        <p>This project is about desaign the backend . It uses asp.net ,CRUD Operations and PostgerSQL .</p>
-        <a href="https://github.com/AlaaNajdi/sda-3-onsite-backend-teamwork" target="_blank">GitHub</a> 
+
+    <section id="main-content">
+    <div id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Backend Project</h3>
+            <img src="https://img.freepik.com/free-vector/software-developers-working-script-coding-engineer-character-programming-php-python-javascript-other-languages_90220-243.jpg?t=st=1728481179~exp=1728484779~hmac=761a571e75ccb4a883082cf1ccdc5e49e7c9fc9935da0e8f7abfacbd9cd8ccec&w=1480" alt="Screenshot of Project" height="200" />
+            <p>This project is about designing the backend. It uses ASP.NET, CRUD Operations, and PostgreSQL.</p>
+            <a href="https://github.com/AlaaNajdi/sda-3-onsite-backend-teamwork" target="_blank">GitHub</a>
+        </div>
+    </div>
+    <div id="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>C#</li>
+            <li>ASP.NET</li>
+            <li>Data Analysis</li>
+            <li>SQL</li>
+        </ul>
     </div>
 </section>
 
-<section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>C#</li>
-        <li>ASP.NET</li>
-        <li>data analysis</li>
-        <li>SQL</li>
-    </ul>
-</section>
-<section id="experience">
-    <h2>Experience</h2>
-    <div>
-        <h3>IT Assistant</h3>
-        <p>Managed Hardware and Software Installation configuration, and maintenance of computer hardware, and software applications.Installed software updates and system upgrades to ensure the stability and security of computer systems.Prepared Designing and implementation efficient end user feedback and error reporting systems.
-      </p>
-    </div>
-</section>
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: alaa.najdi1998@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/alaa-najdi" target="_blank"> My LinkedIn </a></p>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div>
+            <h3>IT Assistant</h3>
+            <p>Managed hardware and software installation, configuration, and maintenance of computer hardware and software applications. Installed software updates and system upgrades to ensure stability and security. Prepared designing and implementation of efficient end-user feedback and error reporting systems.</p>
+        </div>
+    </section>
 
-    <form>
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" required placeholder="Enter your name" />
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required placeholder="Enter your email" />
-        </div>
-        <div>
-            <label for="subject">Subject:</label>
-            <input type="text" name="subject" id="subject" required placeholder="Enter the subject" />
-        </div>
-        <div>
-            <label for="message">Message:</label>
-            <textarea name="message" id="message" rows="5" required placeholder="Type your message here"></textarea>
-        </div>
-        <div>
-            <button type="submit">Send Message</button>
-            <button type="reset">Reset</button>
-        </div>
-    </form>
-</section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: alaa.najdi1998@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/alaa-najdi" target="_blank">My LinkedIn</a></p>
 
-
+        <form>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required placeholder="Enter your name" />
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required placeholder="Enter your email" />
+            </div>
+            <div>
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject" id="subject" required placeholder="Enter the subject" />
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" rows="5" required placeholder="Type your message here"></textarea>
+            </div>
+            <div>
+                <button type="submit">Send Message</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </section>
 </body>
+
 </html>
